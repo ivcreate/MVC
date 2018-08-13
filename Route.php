@@ -1,11 +1,12 @@
 <?php
 //класс маршрутов сайта
 class Route{
+    //переменные класса Route, для хранения маршрута
     protected $controller;
     protected $action;
     protected $params = [];
     static $_instance;
-    
+    //реализация синглтона. Но она мне не понадобилась
     public static function getInstance() {
 		if(!(self::$_instance instanceof self)) 
 			self::$_instance = new self();
